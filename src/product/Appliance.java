@@ -3,17 +3,17 @@ package product;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 
-public class Appliances extends Product {
+public class Appliance extends Product {
 
     private String model;
     private LocalDate productionDate;
     private double weight;
 
-    public Appliances(String name, String brand, double price, String model, double weight) {
+    public Appliance(String name, String brand, double price, String model, double weight) {
         super(name, brand, price);
         this.model = model;
-        this.productionDate = setProductionDate();
         this.weight = weight;
+        this.productionDate = setProductionDate();
     }
 
     public String getModel() {

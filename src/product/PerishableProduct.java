@@ -25,12 +25,12 @@ public class PerishableProduct extends Product {
         double discount = 0;
         String discountPercentage = "";
         if (dateOfPurchase.isEqual(expirationDate)) {
-            discount = (getPrice() - (getPrice() * 0.5));
+            discount = getPrice() * 0.5;
             discountPercentage = "50%";
         } else {
             int days = Period.between(dateOfPurchase, expirationDate).getDays();
             if (days <= 5) {
-                discount = (getPrice() * 0.1);
+                discount = getPrice() * 0.1;
                 discountPercentage = "10%";
             }
         }
